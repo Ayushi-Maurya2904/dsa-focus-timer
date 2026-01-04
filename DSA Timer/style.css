@@ -1,0 +1,260 @@
+.App{
+  position: relative;
+  width: 100%;
+  height: 100vh;   /* IMPORTANT */
+}
+
+.main-screen,
+.progress-screen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.card, .progress{
+    background-color: rgb(29,41,60);
+    height: 500px;
+    width: 350px;
+    display: flex;
+    flex-direction: column ;
+    justify-items: center;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 25px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;   
+}
+
+.hidden {
+  display: none;
+}
+
+.top{
+    padding-left: 5px;
+    flex:1
+    
+}
+
+#main-head1{
+    font-size: 25px;
+    font-weight: bolder;
+       
+}
+
+.sub-head{
+    font-weight: bold;
+    color: #9699a3;
+}
+
+.btn{
+    height: 50px;
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 8px;
+    margin: 6px;
+    background-color: #394356;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#btn1{
+    border: 3px solid #1c5f5b;
+    cursor: pointer;
+}
+
+#btn1:hover{
+    opacity: 70%;
+    transition: opacity 1s;
+
+}
+
+#btn1:focus{
+    background-color: rgb(21,68,73) ;
+    border-color:  rgb(39, 137, 82) ;
+    border-width: 3px;
+     
+}
+#btn2{
+    border: 3px solid #4c4235;
+     cursor: pointer;
+}
+
+
+#btn2:hover{
+    opacity: 70%;
+    transition: opacity 1s;
+
+}
+
+#btn2:focus{
+    background-color: #483f31;
+    border-color: #6b5436 ;
+    border-width: 3px;
+}
+#btn3{
+    border: 3px solid #5f3143;
+    cursor: pointer;
+}
+
+#btn3:hover{
+    opacity: 70%;
+    transition: opacity 1s;
+
+}
+
+#btn3:focus{
+    background-color: #48283a;
+    border-color: #ec1f41 ;
+    border-width: 3px;
+}   
+.mid{
+    padding-left: 5px;
+    font-size: 18px;
+    flex:1;
+}
+
+.btns {
+    height: 55px;
+    width: 148px;
+    margin: 8px;
+    border: 3px solid #3e4859;
+    border-radius: 8px;
+    background-color: #303b4e;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+.btns:hover{
+    background-color: rgb(62,73,91);
+    transition: background-color 2s;
+    border: 2px solid white;
+
+}
+.end{
+    display: flex;
+    flex-direction: column;
+}
+
+#btn-end1{
+    height: 70px;
+    width: 320px;
+    margin-top: 15px;
+    align-self: center;
+    background-color: #293346;
+    border: 3px solid #3e4859;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    border-radius: 12px;
+}
+
+#btn-end2{
+    height: 50px;
+    width: 320px;
+    align-self: center;
+    margin-top:15px;
+    background-color: #303b4e;
+    border: 3px solid #3e4859;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    border-radius: 15px;
+}
+
+
+#arrow{
+    height: 40px;
+    width: 40px;
+    border-radius: 12px;
+    background-color: rgb(39,49,68);
+    border: 2px solid #333e50;
+    color: white;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+
+}
+
+.main-head2{
+ font-size: 27px;
+ text-align: center;
+ font-weight: bolder;
+}
+
+.top-btn1{
+    height: 90px;
+    border-radius: 15px;
+    background-color: rgb(28,49,81);
+    border: 2px solid rgb(30,56,101);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#btn-mid1 {
+    height: 95px;
+    width: 150px;
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgb(26,56,66) ;
+    border: 2px solid rgb(19,89,81);
+      color: white;
+         border-radius: 12px;
+}
+
+#btn-mid2{
+    height: 95px;
+    width: 150px;
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
+     background-color: #32293b ;
+    border: 2px solid #592839 ;
+      color: white;
+         border-radius: 12px;
+}
+
+
+
+#end-btn1{
+    height: 90px;
+    width: 95px;
+    margin: 5px;
+    font-size: 20px;
+    font-weight: bold;
+     background-color:rgb(26,56,66) ;
+    border: 2px solid rgb(19,89,81) ;
+      color: white;
+         border-radius: 12px;
+}
+
+#end-btn2{
+    height: 90px;
+    width: 95px;
+     margin: 5px;
+     font-size: 20px;
+    font-weight: bold;
+     background-color: #333537 ;
+    border: 2px solid #684e29 ;
+      color: white;
+         border-radius: 12px;
+
+}
+
+#end-btn3{
+    height: 90px;
+    width: 95px;
+     margin: 5px;
+     font-size: 20px;
+    font-weight: bold;
+     background-color: #32293b ;
+    border: 2px solid #592839;
+      color: white;
+      border-radius: 12px;
+}

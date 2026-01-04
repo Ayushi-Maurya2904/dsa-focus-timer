@@ -1,0 +1,107 @@
+<!--
+================ REVISION NOTES =================
+
+APP STRUCTURE
+- Single HTML file, multiple UI screens.
+- Screens are sections, NOT pages or routes.
+
+SCREEN OVERLAP (VERY IMPORTANT)
+- Parent `.app` → position: relative
+- `.main-screen` & `.progress-screen` → position: absolute
+- Both use:
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+→ This makes screens overlap and stay centered responsively.
+
+VISIBILITY LOGIC
+- `.hidden { display: none; }` controls which screen is visible.
+- Buttons do NOT hide/show screens directly.
+- JS will ONLY toggle `.hidden` class later.
+
+BUTTON STATES
+- `:active` / `.active` = visual feedback ONLY.
+- Never use button state to control layout or visibility.
+
+POSITIONING RULE
+- Never center using fixed px (top:100px, left:50px).
+- Always use transform method for responsive UI.
+
+MENTAL MODEL
+HTML → structure
+CSS  → position + visibility
+JS   → state (which screen is active)
+
+================================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA Extension</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!--
+APP WRAPPER
+- Reference container for absolute positioning
+- Must remain position: relative
+-->
+   <div class="App">
+    <!--MAIN SCREEN
+- Default visible screen on load
+- Hidden only when user navigates to Progress screen-->
+    <div class="card main-screen">
+      <div class="top">
+        <p id="main-head1">DSA Focus Timer</p>
+        <p class="sub-head">Question Level</p>
+      <div >
+         <button class="btn" id="btn1">Easy</button>
+        <button class="btn" id="btn2">Medium</button>
+        <button class="btn" id="btn3">Hard</button>
+      </div>
+        
+    <div class="mid">
+        <p class="sub-head">Attempt Type</p>
+         <button class="btns" id="btns1">First Attempt New problem</button>
+          <button class="btns" id="btns2">Revision Practice again</button>
+    </div>
+    <div class="end">
+        <button id="btn-end1">Timer Duration</button>
+        <button id="btn-end2">Start Timer</button>    
+    </div>    
+    </div>
+
+    <!-- Progress Screen 
+- Hidden by default using `.hidden`
+- Overlaps main screen in same position
+- Shown later via JS class toggle-->
+     <div class="progress  progress-screen hidden">
+        <button id="arrow" type="button">&#8592;</button>
+        <p class="main-head2">Progress</p>
+        <button class="top-btn1">Total Attempts</button>
+     
+      <div class="mid2">
+        <p class="sub-head">Results</p>
+        <button class="btn-mid" id="btn-mid1">Solved</button>
+        <button class="btn-mid" id="btn-mid2">Unsolved</button>
+      </div>
+      <div class="end2">
+        <p class="sub-head">Difficulty Breakdown</p>
+        <button id="end-btn1">Easy</button>
+         <button id="end-btn2">Medium</button>
+       <button id="end-btn3">Hard</button>
+      </div>
+     </div>
+    </div>
+</body>
+</html>
+<!--
+1 HTML → many screens
+Relative parent + absolute children = overlap
+Center with transform, not pixels
+Visibility via `.hidden`, not buttons
+JS toggles classes, not styles
+-->
